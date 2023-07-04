@@ -22,7 +22,7 @@ node {
       def resourceGroup = 'new'
       def webAppName = 'kakarla'
       // login Azure
-      withCredentials([usernamePassword(credentialsId: 'da5220d4-4622-4240-9ced-3ecae6ad26ac', passwordVariable: 'AZURE_CLIENT_SECRET', usernameVariable: 'AZURE_CLIENT_ID')]) {
+      withCredentials([usernamePassword(credentialsId: '0ef216ca-571e-4e0f-bc1b-697b4cd63854', passwordVariable: 'AZURE_CLIENT_SECRET', usernameVariable: 'AZURE_CLIENT_ID')]) {
        sh '''
           az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID
           az account set -s $AZURE_SUBSCRIPTION_ID
